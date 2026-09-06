@@ -6,6 +6,17 @@
 // @param: slider | vibrate_ms | Vibrate (ms) | 800 | 100-5000
 
 (() => {
+  function strongPulse() {
+    r_vibrate_strong();
+
+    setTimeout(() => {
+      r_vibrate_strong();
+    }, 120);
+
+    setTimeout(() => {
+      r_vibrate_strong();
+    }, 240);
+  }
   log("Test simulation started");
   const strmap = r_pref_str("map");
   let route;
@@ -75,11 +86,9 @@
   }
   let vibrationTimer;
   if (r_pref_bool("vibrate")) {
-    let step = false;
     vibrationTimer = setInterval(
       () => {
-        r_vibrate(step ? 0 : 2);
-        step = !step;
+        strongPulse();
       },
       Number(r_pref_num("vibrate_ms")),
     );
