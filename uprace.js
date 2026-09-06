@@ -2,7 +2,7 @@
 // @param: slider | speedKmh | Speed (km/h) | 14 | 1-100
 // @param: slider | durationMinutes | Duration (minutes) | 30 | 5-180
 // @param: switch | autoStop | Auto stop | true
-// @param: switch | vibrate | Vibrate | true
+// @param: switch | vibrate | Vibrate | false
 // @param: slider | vibrate_ms | Vibrate (ms) | 800 | 100-5000
 
 (() => {
