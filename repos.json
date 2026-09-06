@@ -1,0 +1,15 @@
+{
+  "repoName": "My Repo",
+  "author": "yourname",
+  "tweaks": [
+    {
+      "id": "my.tweak.id",
+      "name": "My Tweak",
+      "description": "What it does",
+      "version": "1.0.0",
+      "symbol": "sparkle",
+      "author": "tweakauthor",
+      "scriptURL": "https://…/tweak.js"
+    }
+  ]
+}
