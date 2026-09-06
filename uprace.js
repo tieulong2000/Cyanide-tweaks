@@ -1,6 +1,9 @@
 // @param: slider | speedKmh | Speed (km/h) | 14 | 1-100
 // @param: slider | durationMinutes | Duration (minutes) | 30 | 5-180
 // @param: switch | autoStop | Auto stop | true
+// @param: switch | vibrate | Vibrate | true
+// @param: slider | vibrate_ms | Vibrate (ms) | 800 | 100-5000
+
 (() => {
   log("Test simulation started");
 
@@ -28,7 +31,17 @@
     log("Failed to start simulation");
     return;
   }
-
+  let vibrationTimer;
+  if (r_pref_bool("vibrate")) {
+    let step = false;
+    vibrationTimer = setInterval(
+      () => {
+        r_vibrate(step ? 0 : 2);
+        step = !step;
+      },
+      Number(r_pref_num("vibrate_ms")),
+    );
+  }
   if (r_pref_bool("autoStop")) {
     let minutes = Number(r_pref_num("durationMinutes"));
 
@@ -46,6 +59,10 @@
       const stopped = locsim_stop();
 
       log("locsim_stop = " + stopped);
+
+      if (vibrationTimer) {
+        clearInterval(vibrationTimer);
+      }
     }, durationMs);
   }
 })();
