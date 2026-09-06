@@ -2,7 +2,11 @@
 // @param: number | motionStrength | Motion strength | 1
 
 (() => {
-  motionsim_start(5, 1);
+  log("Motion test begin");
+
+  const ok = motionsim_start(5, 1);
+
+  log("motionsim_start=" + ok);
 
   motionsim_coremotion_test();
   // const speedKmh = r_pref_num("speedKmh");
