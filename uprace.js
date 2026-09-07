@@ -99,8 +99,17 @@
   }
 
   log("Starting route...Speed = " + speedKmh + " km/h");
+  let minutes = Number(r_pref_num("durationMinutes"));
 
-  const ok = locsim_start_route(JSON.stringify(route), r_pref_num("speedKmh"));
+  if (!Number.isFinite(minutes) || minutes <= 0) {
+    minutes = 15;
+  }
+
+  const ok = locsim_start_route(
+    JSON.stringify(route),
+    r_pref_num("speedKmh"),
+    minutes,
+  );
 
   log("locsim_start_route = " + ok);
 
@@ -118,12 +127,6 @@
     );
   }
   if (r_pref_bool("autoStop")) {
-    let minutes = Number(r_pref_num("durationMinutes"));
-
-    if (!Number.isFinite(minutes) || minutes <= 0) {
-      minutes = 15;
-    }
-
     const durationMs = minutes * 60 * 1000;
 
     log("Simulation will stop after " + minutes + " minute(s)");
