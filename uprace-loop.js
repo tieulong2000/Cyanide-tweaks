@@ -153,7 +153,7 @@
 
     setTimeout(() => {
       startLoop();
-    }, durationMs + 2000);
+    }, durationMs - 80*1000);
   }
 
   startLoop();
