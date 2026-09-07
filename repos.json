@@ -55,6 +55,24 @@
       "symbol": "sparkle",
       "author": "tweakauthor",
       "scriptURL": "https://github.com/tieulong2000/Cyanide-tweaks/raw/refs/heads/main/motion.js"
+    },
+    {
+      "id": "my.tweak.a1",
+      "name": "a1",
+      "description": "What it does",
+      "version": "1.0.0",
+      "symbol": "sparkle",
+      "author": "tweakauthor",
+      "scriptURL": "https://github.com/tieulong2000/Cyanide-tweaks/raw/refs/heads/main/a1.js"
+    },
+    {
+      "id": "my.tweak.a2",
+      "name": "a2",
+      "description": "What it does",
+      "version": "1.0.0",
+      "symbol": "sparkle",
+      "author": "tweakauthor",
+      "scriptURL": "https://github.com/tieulong2000/Cyanide-tweaks/raw/refs/heads/main/a2.js"
     }
   ]
 }
