@@ -39,6 +39,15 @@
       "scriptURL": "https://github.com/tieulong2000/Cyanide-tweaks/raw/refs/heads/main/uprace.js"
     },
     {
+      "id": "my.tweak.upraceloop",
+      "name": "UpRace Loop",
+      "description": "What it does",
+      "version": "1.0.0",
+      "symbol": "sparkle",
+      "author": "tweakauthor",
+      "scriptURL": "https://github.com/tieulong2000/Cyanide-tweaks/raw/refs/heads/main/uprace-loop.js"
+    },
+    {
       "id": "my.tweak.motion",
       "name": "Motion",
       "description": "What it does",
